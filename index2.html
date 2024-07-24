@@ -1,0 +1,746 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses Tracker</title>
+  <link rel="stylesheet" href="index2.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="head">
+      <h1>Expenses Tracker</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- Income Table -->
+        <!-- <div class="salary">
+          <table class="first table">
+            <tr>
+              <th>INCOME</th>
+              <th>BALANCE</th>
+            </tr>
+            <tr>
+              <td class="income"></td>
+              <td id="balancee"></td>
+            </tr>
+          </table>
+        </div>
+      </div> -->
+    <!-- Income Table as Card -->
+
+      <div class="card salary">
+        <!-- <div class="card-header">INCOME</div> -->
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6"><strong>Income</strong></div>
+            <div class="col-6"><strong>Balance</strong></div>
+          </div>
+          <div class="row">
+            <div class="col-6 income"></div>
+            <div class="col-6" id="balancee"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- <div class="col-lg-6"> -->
+        <div class="col-lg-6 mb-4">
+        <!-- Pie Chart -->
+        <div class="chart-container">
+          <canvas id="expenseChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expense Form -->
+    <!-- <div class="main"> -->
+      <div class="main mb-4">
+      <form id="expenseForm">
+        <div class="form-group">
+          <label for="category-select">Category:</label>
+          <select name="category" id="category-select" class="form-control">
+            <option value="Medical">Medical</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Traveling">Traveling</option>
+            <option value="HouseRent">HouseRent</option>
+            <option value="Bills">Bills</option>
+            <option value="EMI">EMI</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" class="form-control" placeholder="Enter the amount" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Add</button>
+      </form>
+    </div>
+
+    <!-- Expense Table -->
+    <!-- <div class="table">
+      <table class="second table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Expense</th>
+            <th>Total</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody> -->
+          <!-- Expense rows will be added dynamically -->
+        <!-- </tbody>
+      </table>
+    </div> -->
+
+    <!-- Expense Table as Card -->
+    <!-- <div class="table"> -->
+      <div class="table mb-4">
+      <div class="card">
+        <!-- <div class="card-header">Expenses</div> -->
+        <div class="card-body">
+          <table class="second table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Expense</th>
+                <th>Total</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Expense rows will be added dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Edit Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Edit Expense</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="editForm">
+              <div class="form-group">
+                <label for="editCategory">Category:</label>
+                <input type="text" class="form-control" id="editCategory" required>
+              </div>
+              <div class="form-group">
+                <label for="editAmount">Amount:</label>
+                <input type="number" class="form-control" id="editAmount" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+  </div> 
+ 
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+  <!-- Your custom JavaScript -->
+  <script src="index.js"></script>
+</body>
+</html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses Tracker</title>
+  <link rel="stylesheet" href="index2.css">
+  <!-- Bootstrap CSS -->
+   <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  -->
+<!-- Chart.js Library -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+ <!-- </head>
+
+
+<body>
+  <div class="head">
+    <h1>Expenses Tracker</h1>
+  </div>
+  <div class="main">
+    <form id="expenseForm">
+      <label for="category-select">Category:</label>
+      <select name="category" id="category-select" class="form-control">
+        <option value="Medical">Medical</option>
+        <option value="Grocery">Grocery</option>
+        <option value="Traveling">Traveling</option>
+        <option value="HouseRent">HouseRent</option>
+        <option value="Bills">Bills</option>
+        <option value="EMI">EMI</option>
+        <option value="Others">Others</option>
+      </select>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" class="form-control" placeholder="Enter the amount" required>
+      <button type="submit" class="btn btn-primary mt-2">Add</button>
+    </form>
+  </div>
+  <div class="salary">
+    <table class="first">
+      <tr>
+        <th>INCOME</th>
+        <th>BALANCE</th>
+      </tr>
+      <tr>
+        <td class="income"></td>
+        <td id="balancee"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="table">
+    <table class="second">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Expense</th>
+          <th>Total</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody> -->
+        <!-- Expense rows will be added dynamically -->
+  <!-- </tbody>
+    </table>
+  </div> -->
+  
+  <!-- Canvas element for the pie chart -->
+  <!-- <div class="chart-container" style="width: 50%; margin: auto;">
+    <canvas id="expenseChart"></canvas>
+  </div> -->
+
+  <!-- Bootstrap Edit Modal -->
+  <!-- <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Edit Expense</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="editForm">
+            <div class="form-group">
+              <label for="editCategory">Category:</label>
+              <input type="text" class="form-control" id="editCategory" required>
+            </div>
+            <div class="form-group">
+              <label for="editAmount">Amount:</label>
+              <input type="number" class="form-control" id="editAmount" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>  -->
+
+  <!-- Bootstrap JS and dependencies -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  -->
+
+  <!-- Your custom JavaScript -->
+  <!-- <script src="index.js"></script>
+</body>
+</html>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="index2.css" />
+  </head>
+  <body>
+    <div class="head">
+     
+      <h1>Expenses Tracker</h1>
+      
+    </div>
+
+    <div class="main">
+      <form action="">
+         <ul>
+          <li> 
+            <label for="">Category:</label>
+            <select name="category" id="category-select" style="color: black">
+              Category
+              <option value="Medical">Medical</option>
+              <option value="Grocery">Grocery</option>
+              <option value="Traveling">Traveling</option>
+              <option value="HouseRent">HouseRent</option>
+              <option value="Bills">Bills</option>
+              <option value="EMI">EMI</option>
+              <option value="Others">Others</option>
+            </select> -->
+          <!-- </li>
+          <li> -->
+            <!-- <label for="amount">Amount:</label>
+            <input type="num" id="amount" placeholder="Enter the amount" /> -->
+          <!-- </li> -->
+          <!-- <li> -->
+            <!-- <button id="btn">Add</button> -->
+        <!-- </li> -->
+        <!-- </ul> -->
+       
+      <!-- </form>
+    </div>
+     first table -->
+    <!-- <div class="salary">
+      <table class="first">
+        <tr>
+          <th>INCOME</th>
+          <th>BALANCE</th>
+        </tr>
+        <tr>
+          <td class="income"></td>
+          <td id="balancee"></td>
+        </tr>
+      </table>
+    </div> 
+
+
+   //second table -->
+
+    <!-- <div class="table">
+      <table class="second">
+        <tr>
+          <th id="category">Category</th>
+          <th id="expenses">Expense</th>
+          <th id="total">Total</th>
+          <th id="delete">Delete</th>
+        </tr>
+       
+      </tr> -->
+      <!-- </table>
+    </div> --> 
+
+    <!-- first table -->
+
+
+
+    <!-- <div class="salary">
+        <table class="first">
+          <tr>
+            <th>INCOME</th>
+            <th>BALANCE</th>
+          </tr>
+          <tr>
+            <td class="income"></td>
+            <td id="balancee"></td>
+          </tr>
+        </table>
+      </div> 
+
+
+
+
+    highest expenses
+    <div class="final">
+      <h3 id="head">Highest expenses</h3>
+      <ul>
+        <li id="category2">Category:</li>
+        <li id="expenses2">Expenses:</li>
+      </ul>
+    </div>
+
+     <script src="index.js"></script>
+  </body>
+</html> 

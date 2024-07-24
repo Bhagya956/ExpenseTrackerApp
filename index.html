@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Tracker</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-image: url(./bgimg.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: cornsilk;
+            font-family: sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            font-family: "Overlock SC", sans-serif;
+            color: indigo;
+            margin: 20px 0;
+        }
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .container {
+            border-radius: 10px;
+            height: auto;
+            width: 350px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: brightness(95%);
+            background-color: beige;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h2 {
+            text-align: center;
+            font-family: "Spectral SC", serif;
+            font-size: 40px;
+            color: rgb(139, 224, 64);
+            margin: 0 0 30px 0;
+        }
+        #salary {
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.9);
+            font-family: "Valuta", sans-serif;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            width: calc(100% - 40px);
+            margin: 30px auto 0;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: "Spectral SC", serif;
+            background-color: greenyellow;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+            .container {
+                width: 80%;
+                height: auto;
+            }
+        }
+        @media (max-width: 428px) {
+            h1 {
+                font-size: 30px;
+                margin-top: 10px;
+            }
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            h2 {
+                font-size: 30px;
+                margin: 0 0 20px 0;
+            }
+            #salary {
+                font-size: 16px;
+                margin: 15px 0;
+            }
+            button {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <h1>Expenses Tracker</h1>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h2>SALARY</h2>
+            <form id="salaryForm">
+                <label for="salary">
+                    <input type="number" placeholder="Enter your salary" id="salary" required min="0">
+                </label>
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+<script>
+    document.getElementById("salaryForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        var salaryInput = document.getElementById("salary").value.trim();
+        
+        // Validate if salary is not empty and is a non-negative number
+        if (isValidSalary(salaryInput)) {
+            var salary = {
+                key: salaryInput
+            };
+            window.localStorage.setItem("sal", JSON.stringify(salary));
+            window.location.assign("./index2.html");
+        } else {
+            // Show specific error messages based on validation results
+            if (salaryInput === "") {
+                alert("Please enter your salary.");
+            } else {
+                alert("Please enter a valid non-negative salary.");
+            }
+        }
+    });
+
+    function isValidSalary(salary) {
+        // Check if salary is a non-empty string and a non-negative number
+        return salary !== "" && /^\d+(\.\d+)?$/.test(salary) && parseFloat(salary) >0;
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <body>
+    <div class="head">
+        <h1>Expenses Tracker</h1>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h2>SALARY</h2>
+            <form action="">
+                <label for="salary">
+                    <input type="number" placeholder="Enter your salary" id="salary" required>
+                </label>
+                <button class="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.forms[0].addEventListener("submit", (e) => {
+            e.preventDefault();
+            var salary = {
+                key: e.target[0].value
+            };
+            window.localStorage.setItem("sal", JSON.stringify(salary));
+            window.location.assign("./index2.html");
+        });
+    </script>
+</body>
+</html>
+
+
+      
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Tracker</title>
+</head>
+<style>
+  body{
+    padding: 0px;
+    background-image: url(./bgimg.avif);
+    background-repeat: no-repeat;
+    background-size: 100% 140%;
+    background-color: cornsilk;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Overlock SC", sans-serif;
+    /* margin-bottom: 200px; */
+    color: indigo;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 70px;
+    
+}
+.container{
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 360px;
+    width: 350px;
+    box-shadow: 0px 0px 20px;
+    border: none;
+    backdrop-filter: brightness(95%);
+    background-color: beige;
+}
+h2{
+    text-align: center;
+    font-family: "Spectral SC", serif;
+    font-size: 40px;
+    color: rgb(139, 224, 64);
+}
+#num{
+    text-align: center;
+    padding: 10px 20px 10px 20px ;
+    font-size: 20px;
+}
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#salary{
+    padding: 7px 23px 7px 23px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    background: rgba(255, 255,255,);
+    font-family:" Valuta"
+}
+button{
+    margin-left:40px;
+    margin-top: 50px;
+    padding: 10px 90px 10px 90px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Spectral SC", serif;
+} 
+button:
+/* hover */
+{
+background-color: greenyellow;
+color: white;
+}
+.head{
+    margin-top: 80px;
+}
+img{
+position: relative;
+left: 450px;
+top: 100px;
+}
+span{
+    color: red;
+}
+@media (max-width:428px){
+    h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Overlock SC", sans-serif;
+    margin-top: 58px;
+}
+img {
+    position: relative;
+    left: 20px;
+    top: 100px;
+    height: 40px;
+    width: 50px;
+}
+.container{
+    margin-right: 45px;
+}
+}
+</style>
+<body>
+<div class="head">
+   
+    <h1>Expenses Tracker</h1>
+</div>
+    <div class="main">
+        
+        <div class="container">
+           <h2>SALARY</h2>
+           <form action="">
+           <label for="box" id="box">
+              <input type="num" placeholder="Enter your salary" id="salary">
+           </label>
+              <button class="submit">submit</button>
+            </form>
+        </div>
+    </div>
+   <script>
+
+ document.forms[0].addEventListener("submit",(e)=>{
+  e.preventDefault()
+    var salary={
+        key: e.target[0].value
+    }
+    window.localStorage.setItem("sal",JSON.stringify(salary))
+    window.location.assign("./index2.html")
+     console.log(salary)
+    e.target[0].value=""
+ })
+   </script>
+</body>
+</html>  

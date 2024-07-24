@@ -1,0 +1,1119 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: cornsilk;
+  margin: 0;
+  padding-top: 20px;
+}
+
+/* Header styles */
+.head {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.head h1 {
+  margin: 0;
+}
+
+/* Main container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card styles */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+/* Expense form */
+.main {
+  margin-bottom: 20px;
+}
+
+.main form {
+  text-align: left;
+}
+
+.main .form-group {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .main .form-group {
+    width: 50%;
+  }
+}
+
+/* Expense table */
+.table {
+  margin-bottom: 20px;
+}
+
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table th,
+.table td {
+  padding: 10px; 
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size:12px;
+  white-space:nowrap;
+  /* word-wrap:break-word; */ 
+
+}
+
+.table th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.table .action-buttons {
+  white-space:nowrap;
+}
+
+.table .action-buttons button {
+margin-right:5px;
+display:inline-block;
+padding:5px 10px;
+font-size:12px;
+}
+
+.table .action-buttons button:last-child {
+  margin-right:0;
+}
+
+
+/* Adjust the width of the action column */
+.table th:nth-child(4),
+.table td:nth-child(4) {
+  width: 100px; /* Adjust this value as needed */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .table th,
+  .table td {
+    font-size: 12px; /* Decrease font size for smaller screens */
+  }
+
+  .table .action-buttons button {
+    font-size: 12px; /* Decrease button font size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .table th,
+  .table td {
+    font-size: 6px; /* Further decrease font size for very small screens */
+  }
+
+  .table .action-buttons button {
+    font-size: 6px; /* Further decrease button font size for very small screens */
+  }
+}
+
+ 
+
+/* Chart container */
+.chart-container {
+  /* max-width: 100%; */
+  max-width: 100%;
+  
+  margin-top:40px;
+
+  /* margin-left:110px; */
+}
+
+@media only screen and (min-width: 768px) {
+  .chart-container {
+    max-width: 60%;
+    margin:0 auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .chart-container {
+    max-width: 40%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .chart-container {
+    max-width: 30%;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General styles */
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+} */
+
+/* Header styles */
+/* .head {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.head h1 {
+  margin: 0;
+} */
+
+/* Main container */
+/* .main {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.main form label {
+  flex: 0 0 100%;
+  text-align: left;
+}
+
+.main form select,
+.main form input[type="number"],
+.main form button {
+  flex: 0 0 calc(50% - 10px);
+}
+
+.main form button {
+  flex: 0 0 100%;
+} */
+
+/* Salary table */
+/* .salary {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.salary table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.salary th,
+.salary td {
+  padding: 10px;
+} */
+
+/* Expense table */
+/* .table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+} */
+
+/* .table th {
+  background-color: #f0f0f0;
+  color: #333;
+} */
+
+/* Responsive layout */
+/* @media only screen and (max-width: 768px) {
+  .main form select,
+  .main form input[type="number"],
+  .main form button {
+    flex: 0 0 calc(100% - 20px);
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+/* Reset default browser styles */
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+/* Body styles */
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+} */
+
+/* Header styles */
+/* .head {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+} */
+
+/* .head h1 {
+  margin: 0;
+} */
+
+/* Main container */
+/* .container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+} */
+
+/* Card styles */
+/* .card {
+  flex: 1 1 calc(50% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #333;
+} */
+
+/* Form styles */
+/* .form-group {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+} */
+
+/* form select,
+form input[type="number"],
+form button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+} */
+
+/* Summary styles */
+/* .summary {
+  text-align: center;
+  padding: 20px;
+}
+
+.summary-item {
+  margin-bottom: 10px;
+}
+
+.summary-label {
+  font-weight: bold;
+}
+
+.summary-value {
+  font-weight: bold;
+  color: #009688;
+} */
+
+/* Table styles */
+/* .table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+} */
+
+/* table th,
+table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f0f0f0;
+  color: #333;
+} */
+
+/* Responsive layout */
+/* @media only screen and (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(100% - 20px);
+  }
+} */ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+Header styles */
+/* .head {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+} */
+
+/* .head h1 {
+  margin: 0;
+} */
+
+/* Main container */
+/* .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+} */
+
+/* Card styles */
+/* .card {
+  flex: 1 1 300px; /* Adjust width as per design needs */
+  /* background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+} */ */
+
+/* .card h2 {
+  margin-top: 0;
+  color: #333;
+} */
+
+/* Form styles */
+/* .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+} */
+/* 
+form label {
+  display: block;
+  margin-bottom: 5px;
+} */
+
+/* form select,
+form input[type="number"],
+form button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Summary styles */
+/* .summary {
+  text-align: center;
+  padding: 20px;
+}
+
+.summary-item {
+  margin-bottom: 10px;
+}
+
+.summary-label {
+  font-weight: bold;
+}
+
+.summary-value {
+  font-weight: bold;
+  color: #009688;
+}
+
+/* Table styles */
+/* .table-container { */
+  /* overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+} */
+
+/* table th {
+  background-color: #f0f0f0; */
+  /* color: #333;
+} */
+
+/* Responsive layout */
+/* @media only screen and (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* Adjust for full width on smaller screens */
+  /* }
+}  */
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.head h1 {
+  color: #343a40;
+}
+
+.main {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.table-borderless th, .table-borderless td {
+  border: none;
+}
+
+.table th {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+#editModal .modal-header {
+  background-color: #007bff;
+  color: white;
+}
+
+#editModal .modal-footer .btn-primary {
+  background-color: #007bff;
+}
+
+#editModal .modal-footer .btn-secondary {
+  background-color: #6c757d;
+}
+
+#editModal .form-group label {
+  font-weight: bold;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+#expenses2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 600px) {
+  .main form label, .main form input, .main form select, .main form button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .main form input, .main form select {
+    width: calc(100% - 20px);
+  }
+
+  .salary table {
+    width: 100%;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
